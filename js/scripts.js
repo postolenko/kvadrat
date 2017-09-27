@@ -1,5 +1,12 @@
 $(document).ready(function() {
 
+    var w = window,
+    d = document,
+    e = d.documentElement,
+    g = d.getElementsByTagName('body')[0],
+    bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
+
+    // ----------------------------
 
     var setFooterPositionInterval;
     var contentCoor;
@@ -19,6 +26,8 @@ $(document).ready(function() {
 
     getPromoTopPadding();
 
+    getAdaptivePositionElements();
+
     $(window).resize(function() {
 
         if( $(".footer").length > 0 ) {
@@ -31,9 +40,15 @@ $(document).ready(function() {
 
         // ----------------------
 
+        bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
+
+        // ----------------------
+
         getPromoTopPadding();
 
         getTitleShapeParams();
+
+        getAdaptivePositionElements();
 
     });
 
@@ -121,6 +136,34 @@ $(document).ready(function() {
             shape.css({
                 "width" : ( $(this).width() - $(this).find(".h-inner").outerWidth(true) ) / 2 + "px"
             });
+        });
+
+    }
+
+    function getAdaptivePositionElements() {
+
+        $(".append-elem").each(function() {
+
+            if( $(this).hasClass("desktop-position") ) {
+
+                screenParam = parseInt( $(this).attr("data-min-screen") );
+
+                indexElem = $(this).attr("data-append-descktop-elem");
+
+                if( bodyWidth <= screenParam ) {
+
+                    $("[data-append-elem = '"+ indexElem +"']").append($(this).children());
+
+                }
+
+                 if( bodyWidth > screenParam ) {
+
+                    $("[data-append-descktop-elem = '"+ indexElem +"']").append($("[data-append-elem = '"+ indexElem +"']").children());
+
+                }
+
+            }
+
         });
 
     }

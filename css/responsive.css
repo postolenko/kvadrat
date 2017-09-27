@@ -248,6 +248,10 @@
     	line-height: 26px;
 	}
 
+	.photo-thumb .mask {
+	    background-size: cover;
+	}
+
 	.play-icon {
 	    width: 120px;
 	    height: 120px;
@@ -273,9 +277,18 @@
 
 @media only screen and (max-width: 480px) {
 
+	h1 {
+	    font-size: 21px;
+	    line-height: 31px;
+	}
+
 	h2 {
 	    font-size: 26px;
 	    line-height: 33px;
+	}
+
+	.contact-block {
+	    max-width: 300px;
 	}
 
 	.promo-section .bottom-shape {
