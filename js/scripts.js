@@ -7,6 +7,14 @@ $(document).ready(function() {
 
     // ----------------------------
 
+    var paddingTop;
+
+    // ----------------------------
+
+    var shape;
+
+    // ----------------------------
+
     getFooterPosition();
 
     getPromoTopPadding();
@@ -90,7 +98,7 @@ $(document).ready(function() {
 
     function getPromoTopPadding() {
 
-        var paddingTop = $(".header-site").height();
+        paddingTop = $(".header-site").height();
 
         $(".promo-section").css({
             "padding-top" : paddingTop + "px"
@@ -101,7 +109,7 @@ $(document).ready(function() {
     function getTitleShapeParams() {
 
         $(".h-block").each(function() {
-            var shape = $(this).find(".shape-block");
+            shape = $(this).find(".shape-block");
             shape.css({
                 "width" : ( $(this).width() - $(this).find(".h-inner").outerWidth(true) ) / 2 + "px"
             });
