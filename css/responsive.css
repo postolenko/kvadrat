@@ -160,7 +160,7 @@
 	    background-image: none;
 	}
 
-	.video-mask {
+	.video-block .video-mask {
 		display: none;
 	}
 
