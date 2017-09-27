@@ -1038,8 +1038,8 @@ p.important:before {
     width: 45px;
     height: 45px;
     position: absolute;
-    top: 1px;
-    left: 7px;
+    top: -1px;
+    left: 6px;
     font-size: 46px;
     line-height: 45px;
     color: #ee3800;
