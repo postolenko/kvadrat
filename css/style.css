@@ -805,7 +805,7 @@ a:active {
     background-image: url(../img/mask_bg.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 
     -webkit-transition-property: bottom;
     -webkit-transition-duration: .5s;

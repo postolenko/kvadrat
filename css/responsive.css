@@ -39,6 +39,10 @@
 	    margin: 41px 0 21px 0;
 	}
 
+	.photo-thumb .mask {
+	    background-size: cover;
+	}
+
 	.form-block {
 	    margin: -67px auto 103px auto;
 	    padding: 69px 3% 32px 3%;
