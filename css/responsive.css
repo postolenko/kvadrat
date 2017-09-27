@@ -383,4 +383,12 @@
 	    padding: 17px 3%;
 	}
 
+	.footer-logo-block {
+	    padding: 5px 0;
+	}
+
+	.append-elem-1 {
+		padding: 21px 0 18px 0;
+	}
+
 }
