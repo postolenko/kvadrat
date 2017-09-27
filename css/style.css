@@ -415,31 +415,38 @@ a:active {
 .header-site .col-2 {
     width: 35%;
     padding: 20px 0 0 0;
+    text-align: right;
 }
 
 .logo-block {
     display: inline-table;
+    /*display: inline-block;*/
     vertical-align: top;
-    width: 100%;
+    /*width: 100%;*/
     max-width: 608px;
+    font-size: 0;
+    line-height: 0;
 }
 
-.logo-block .col {
+.logo-block .logo-col {
     display: table-cell;
+    /*display: inline-block;*/
     vertical-align: middle;
 }
 
-.logo-block .col-1 {
+.logo-block .logo-col-1 {
     width: 31%;
     max-width: 187px;
 }
 
-.logo-block .col-2 {
-    width: 69%;
+.logo-block .logo-col-2 {
+    /*width: 69%;*/
+    width: auto;
     padding: 0 0 5px 1%;
+    text-align: left;
 }
 
-.logo-block .col-1 img {
+.logo-block .logo-col-1 img {
     display: block;
     width: auto;
     height: auto;
@@ -459,8 +466,8 @@ a:active {
 }
 
 .contact-block .contact-col-1 {
-    min-width: 250px;
-    text-align: center;
+    text-align: right;
+    padding-right: 5%;
 }
 
 .contact-block .contact-col-2 {
@@ -930,7 +937,7 @@ input:focus {
 }
 
 .range-slider {
-    height: 100px;
+    /*height: 100px;*/
     padding: 39px 0;
 }
 
@@ -940,7 +947,7 @@ p.important {
     line-height: 23px;
     font-weight: normal;
     color: #ee3800;
-    padding: 29px 0 15px 1px;
+    padding: 29px 0 4px 1px;
 }
 
 p.important:before {
@@ -990,17 +997,19 @@ p.important:before {
 }
 
 .form-block .two-cols {
-    margin: 11px 0;
+    margin: 8px 0;
+    text-align: left;
 }
 
 .checkbox-block {
     position: relative;
+    min-height: 40px;
 }
 
 .form-block .checkbox-block {
     display: inline-block;
     vertical-align: baseline;
-    margin: 0 2% 0 0;
+    margin: 5px 2% 32px 0;
     padding: 6px 0;
 }
 
@@ -1013,19 +1022,22 @@ p.important:before {
 }
 
 .checkbox-block label {
+    display: block;
     font-family: "IrinaCTT", Arial, Verdana, sans-serif;
     font-size: 18px;
-    line-height: 23px;
+    line-height: 20px;
     font-weight: normal;
     color: #0c225c;
-    padding: 0 0 0 70px;
+    position: relative;
+    text-align: left;
+    padding: 10px 0 5px 70px;
 }
 
 .checkbox-block label:before {
     display: block;
     content: "";
-    width: 45px;
-    height: 45px;
+    width: 41px;
+    height: 41px;
     position: absolute;
     top: 0;
     left: 0;
@@ -1049,7 +1061,7 @@ p.important:before {
     width: 45px;
     height: 45px;
     position: absolute;
-    top: 0px;
+    top: 1px;
     left: 7px;
     font-size: 46px;
     line-height: 45px;
@@ -1061,9 +1073,10 @@ p.important:before {
     vertical-align: baseline;
     font-family: "IrinaCTT", Arial, Verdana, sans-serif;
     font-size: 18px;
-    line-height: 23px;
+    line-height: 18px;
     font-weight: normal;
     color: #0c225c;
+    margin: 7px 0;
     border-bottom: 3px dotted #0c225c;
 
     -webkit-transition-property: color, border;
@@ -1134,6 +1147,7 @@ p.important:before {
 
 .captcha-block .img-box {
     height: 45px;
+    max-width: 180px;
     overflow: hidden;
     border: 2px solid #0c225c;
 }

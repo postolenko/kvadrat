@@ -21,9 +21,13 @@ $(document).ready(function() {
 
     $(window).resize(function() {
 
-        $(".wrapper").css({"min-height" : $(window).height() + "px"});
+        if( $(".footer").length > 0 ) {
 
-        $(".wrapper").css({"padding-bottom" :  $(".footer").outerHeight(true) + "px"});
+            $(".wrapper").css({"min-height" : $(window).height() + "px"});
+
+            $(".wrapper").css({"padding-bottom" :  $(".footer").outerHeight(true) + "px"});
+
+        }
 
         // ----------------------
 
@@ -73,26 +77,30 @@ $(document).ready(function() {
 
     function getFooterPosition() {
 
-        $(".wrapper").css({"min-height" : $(window).height() + "px"});
+        if( $(".footer").length > 0 ) {
 
-        $(".wrapper").css({"padding-bottom" :  $(".footer").outerHeight(true) + "px"});
+            $(".wrapper").css({"min-height" : $(window).height() + "px"});
 
-        setFooterPositionInterval = setInterval(function() {
+            $(".wrapper").css({"padding-bottom" :  $(".footer").outerHeight(true) + "px"});
 
-            contentCoor = $(".content").offset().top + $(".content").height();
-            footerCoor = $(".footer").offset().top;
+            setFooterPositionInterval = setInterval(function() {
 
-            if( contentCoor != footerCoor ) {
+                contentCoor = $(".content").offset().top + $(".content").height();
+                footerCoor = $(".footer").offset().top;
 
-                $(".wrapper").css({"min-height" : $(window).height() + "px"});
+                if( contentCoor != footerCoor ) {
 
-                $(".wrapper").css({"padding-bottom" :  $(".footer").outerHeight(true) + "px"});
+                    $(".wrapper").css({"min-height" : $(window).height() + "px"});
 
-                clearInterval(setFooterPositionInterval);
+                    $(".wrapper").css({"padding-bottom" :  $(".footer").outerHeight(true) + "px"});
 
-            }
+                    clearInterval(setFooterPositionInterval);
 
-        }, 35);
+                }
+
+            }, 35);
+
+        }
 
     }
 
